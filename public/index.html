@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Multi-AFK & 3D POV Dashboard</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-cube"></i>
+        </div>
+        <div class="brand-text">
+          <h2>AFK Multi-Bot</h2>
+          <span>Live Scoreboard & Inventory</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="tycoon">
+          <i class="fa-solid fa-industry"></i>
+          <span>AFK Tycoon</span>
+        </button>
+        <button class="nav-item" data-tab="oneblock">
+          <i class="fa-solid fa-cube"></i>
+          <span>AFK OneBlock</span>
+        </button>
+        <button class="nav-item" data-tab="pov">
+          <i class="fa-solid fa-camera-retro"></i>
+          <span>Radar & Inventory</span>
+        </button>
+        <button class="nav-item" data-tab="settings">
+          <i class="fa-solid fa-sliders"></i>
+          <span>Pengaturan Bot</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="server-badge">
+          <span class="status-dot online"></span>
+          <span>alwination.id</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Bar Header -->
+      <header class="topbar">
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="page-title">
+          <h1 id="tab-title">Dashboard Multi-Bot AFK</h1>
+          <p id="tab-subtitle">Kelola akun Minecraft AFK, Scoreboard Sidebar & Inventory</p>
+        </div>
+
+        <div class="header-actions">
+          <label class="live-switch" title="Ambil data live (posisi, inventory, scoreboard). Mati = hemat bandwidth">
+            <input type="checkbox" id="live-toggle">
+            <span class="live-slider"></span>
+            <span class="live-text" id="live-text">Beku</span>
+          </label>
+          <button class="btn btn-secondary" id="btn-refresh-once" title="Ambil data terbaru satu kali">
+            <i class="fa-solid fa-rotate"></i>
+          </button>
+          <button class="btn btn-secondary" id="btn-lock-dashboard" title="Kunci Dashboard Web">
+            <i class="fa-solid fa-lock"></i> <span>Kunci Dashboard</span>
+          </button>
+          <button class="btn btn-success" id="btn-start-all">
+            <i class="fa-solid fa-play"></i> <span>Mulai Semua Bot</span>
+          </button>
+          <button class="btn btn-danger" id="btn-stop-all">
+            <i class="fa-solid fa-square"></i> <span>Hentikan Semua</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Account Tabs Bar (Always visible) -->
+      <div class="account-tabs-bar" id="account-tabs-container">
+        <!-- Dynamically filled with account tabs -->
+      </div>
+
+      <!-- Active Bot Header (Always visible) -->
+      <div class="active-bot-header">
+        <div class="active-bot-info">
+          <h2 id="active-bot-title">Akun: -</h2>
+          <span class="status-pill offline" id="active-bot-status-pill">
+            <span class="pulse-dot"></span>
+            <span id="active-bot-status-text">OFFLINE</span>
+          </span>
+        </div>
+        <div class="active-bot-actions">
+          <button class="btn btn-success" id="btn-start-single">
+            <i class="fa-solid fa-play"></i> <span>Mulai Bot Ini</span>
+          </button>
+          <button class="btn btn-primary" id="btn-start-xbox" style="display: none;">
+            <i class="fa-brands fa-xbox"></i> <span>Mulai dengan Xbox</span>
+          </button>
+          <button class="btn btn-danger" id="btn-stop-single" style="display: none;">
+            <i class="fa-solid fa-square"></i> <span>Hentikan Bot Ini</span>
+          </button>
+          <button class="btn btn-secondary" id="btn-quick-pov-tab" title="Lihat kamera First-Person POV bot ini">
+            <i class="fa-solid fa-video"></i> <span>Kamera POV</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Empty State Banner (Shown when accounts == 0) -->
+      <div class="empty-accounts-banner hidden" id="empty-accounts-banner">
+        <div class="empty-icon"><i class="fa-solid fa-users-slash"></i></div>
+        <h3 id="empty-accounts-title">Belum Ada Akun Terdaftar</h3>
+        <p id="empty-accounts-text">Silakan klik tombol <strong>+ Tambah Akun</strong> di atas untuk menambahkan akun Minecraft Crack atau Premium pertama Anda.</p>
+        <button class="btn btn-primary btn-lg" id="btn-add-account-empty">
+          <i class="fa-solid fa-user-plus"></i> Tambah Akun Sekarang
+        </button>
+      </div>
+
+      <!-- TAB 1: DASHBOARD AFK (dipakai bersama oleh tab AFK Tycoon & AFK OneBlock) -->
+      <div class="tab-content active" id="tab-dashboard">
+        <!-- Status Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon icon-server">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Server Minecraft</span>
+              <h3 class="stat-value" id="card-server-host">alwination.id</h3>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon icon-user">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Nama Account</span>
+              <h3 class="stat-value" id="card-bot-name">-</h3>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon icon-health">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Darah & Makanan</span>
+              <h3 class="stat-value" id="card-health-food">20 â¤ / 20 ðŸ–</h3>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon icon-shield">
+              <i class="fa-solid fa-location-crosshairs"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Koordinat Presisi</span>
+              <h3 class="stat-value" id="card-coords">X: 0, Y: 0, Z: 0</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- OneBlock AFK Auto-Breaker Panel (hanya tampil di tab AFK OneBlock) -->
+        <div class="card oneblock-panel mb-3 mode-oneblock-only" id="oneblock-panel">
+          <div class="oneblock-header">
+            <div class="oneblock-title-box">
+              <div class="oneblock-icon-glow"><i class="fa-solid fa-cube"></i></div>
+              <div>
+                <div class="oneblock-title-row">
+                  <h3>OneBlock AFK Auto-Breaker</h3>
+                  <span class="ob-badge idle" id="ob-status-badge">OFFLINE / IDLE</span>
+                </div>
+                <p class="oneblock-sub">Auto-break tanpa henti pada OneBlock dengan deteksi otomatis <strong>Multitool</strong> (All-in-one).</p>
+              </div>
+            </div>
+            <div class="oneblock-actions">
+              <button class="btn btn-warning" id="btn-repair-oneblock" title="Shift + Klik Kanan untuk repair Multitool" style="margin-right: 8px;">
+                <i class="fa-solid fa-wrench"></i> <span>Repair Tool</span>
+              </button>
+              <button class="btn btn-success" id="btn-toggle-oneblock">
+                <i class="fa-solid fa-play"></i> <span>Mulai AFK OneBlock</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="oneblock-body">
+            <div class="oneblock-target-row">
+              <div class="ob-info-item">
+                <span class="ob-info-label"><i class="fa-solid fa-crosshairs"></i> Mode Penambangan:</span>
+                <span class="ob-info-val highlight">F3+T (Blok di Crosshair/Pandangan)</span>
+                <span class="ob-block-badge" id="ob-target-block">(-)</span>
+              </div>
+              <div class="ob-info-item">
+                <span class="ob-info-label"><i class="fa-solid fa-wrench"></i> Status Tool:</span>
+                <span class="ob-tool-badge" id="ob-multitool-status">Mencari Multitool...</span>
+                <span class="ob-durability-text" id="ob-durability-text"></span>
+                <span class="ob-auto-repair-tag" style="margin-left:8px; font-size:11px; color:#a78bfa; background:rgba(167,139,250,0.15); padding:2px 8px; border-radius:4px; border:1px solid rgba(167,139,250,0.3);"><i class="fa-solid fa-shield-halved"></i> Auto-Repair saat &lt; 100</span>
+              </div>
+            </div>
+
+            <div class="oneblock-footer-row">
+              <label class="ob-checkbox-label">
+                <input type="checkbox" id="ob-chk-autoeat" checked>
+                <span><i class="fa-solid fa-drumstick-bite"></i> Auto-Eat (Makan jika lapar &le; 14)</span>
+              </label>
+              <label class="ob-checkbox-label" title="Mengirim sinyal break langsung ke koordinat OneBlock walau terhalang slab">
+                <input type="checkbox" id="ob-chk-ignore-obstacle" checked>
+                <span><i class="fa-solid fa-bolt"></i> Tembus Slab / Abaikan Penghalang</span>
+              </label>
+              <label class="ob-checkbox-label" title="Setelah koneksi terputus dan bot login kembali, tunggu sekian detik sebelum AFK OneBlock dilanjutkan">
+                <input type="checkbox" id="ob-chk-reconnect-delay" checked>
+                <span><i class="fa-solid fa-hourglass-half"></i> Jeda setelah reconnect:</span>
+                <input type="number" id="ob-input-reconnect-delay" min="0" max="600" step="1" value="15" style="width: 64px; margin-left: 4px; padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.25); color: inherit;">
+                <span>detik</span>
+              </label>
+              <div class="ob-live-status-wrap">
+                <span class="ob-pulse-dot"></span>
+                <span id="ob-live-msg">Siap. Pastikan bot berdiri di depan OneBlock lalu klik Mulai.</span>
+                <span class="ob-broken-count" id="ob-broken-count">0 blok</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-split-layout">
+          <!-- Live Terminal & Chat Console Section -->
+          <div class="console-section" style="flex: 2;">
+            <div class="console-header">
+              <div class="console-title">
+                <i class="fa-solid fa-terminal"></i>
+                <span id="terminal-title">Live Console Log -</span>
+              </div>
+              <div class="console-controls">
+                <button class="btn-icon" id="btn-clear-log" title="Bersihkan Log">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+                <label class="autoscroll-toggle">
+                  <input type="checkbox" id="chk-autoscroll" checked>
+                  <span>Auto-Scroll</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="terminal-body" id="terminal-body">
+              <div class="log-entry system">
+                <span class="timestamp">[SYS]</span>
+                <span class="log-msg">Selamat datang di Multi-Bot AFK Dashboard. Interactive Chest GUI & Fix Gens aktif.</span>
+              </div>
+            </div>
+
+            <!-- Quick Action Shortcut Buttons (tombol khusus Tycoon hanya tampil di tab AFK Tycoon) -->
+            <div class="quick-commands-bar">
+              <button class="quick-cmd-btn highlight mode-tycoon-only" data-cmd="/fixgens"><i class="fa-solid fa-wrench"></i> /fixgens (Fix Gens)</button>
+              <button class="quick-cmd-btn highlight mode-tycoon-only" data-cmd="/rewards"><i class="fa-solid fa-gift"></i> /rewards (Claim Rewards)</button>
+              <button class="quick-cmd-btn highlight mode-tycoon-only" data-cmd="/market"><i class="fa-solid fa-store"></i> /market (Night Market)</button>
+              <button class="quick-cmd-btn highlight mode-oneblock-only" data-cmd="/back"><i class="fa-solid fa-rotate-left"></i> /back</button>
+            </div>
+
+            <form class="chat-input-bar" id="form-chat">
+              <div class="input-wrapper">
+                <i class="fa-solid fa-comment-dots"></i>
+                <input type="text" id="input-chat" placeholder="Ketik pesan atau perintah untuk bot ini (misal: /fixgens, /upgradegen, /is)..." autocomplete="off">
+              </div>
+              <button type="submit" class="btn btn-primary" id="btn-send-chat">
+                <i class="fa-solid fa-paper-plane"></i> <span>Kirim</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Server Scoreboard Sidebar Box Card (Bal, Earnings, Level, Rank) -->
+          <div class="card scoreboard-card" style="flex: 1;">
+            <div class="scoreboard-header">
+              <i class="fa-solid fa-table-list"></i>
+              <h3 id="scoreboard-title">Scoreboard</h3>
+            </div>
+            <div class="scoreboard-lines" id="scoreboard-lines">
+              <div class="scoreboard-row placeholder">
+                <span>Menghubungkan bot ke alwination.id...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: RADAR & INVENTORY -->
+      <div class="tab-content" id="tab-pov">
+        <div class="pov-grid">
+          <!-- Real-Time First-Person 3D POV Camera Card -->
+          <div class="card pov-card full-width pov-camera-card" id="pov-camera-card">
+            <div class="pov-camera-header">
+              <div class="camera-title-wrap">
+                <div class="camera-icon-badge"><i class="fa-solid fa-video"></i></div>
+                <div>
+                  <div class="camera-title-row">
+                    <h3>Live First-Person POV Camera (<span class="pov-bot-name">-</span>)</h3>
+                    <span class="camera-status-pill off" id="camera-status-pill">OFFLINE</span>
+                  </div>
+                  <p class="camera-subtitle">Streaming 3D WebGL real-time langsung dari sudut pandang mata bot di Minecraft.</p>
+                </div>
+              </div>
+              <div class="camera-controls">
+                <div class="camera-switch-wrap">
+                  <span class="switch-state-text" id="camera-switch-label">Kamera Mati</span>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="camera-toggle-switch">
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+                <a href="#" target="_blank" class="btn btn-secondary btn-sm" id="btn-camera-new-tab" style="display: none;" title="Buka Kamera di Tab Baru">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Tab Baru
+                </a>
+              </div>
+            </div>
+
+            <!-- Viewport Container -->
+            <div class="pov-viewport-container" id="pov-viewport-container">
+              <!-- Placeholder when camera is OFF -->
+              <div class="pov-placeholder-overlay" id="camera-off-overlay">
+                <div class="placeholder-icon"><i class="fa-solid fa-eye-slash"></i></div>
+                <h4>Kamera POV Sedang Non-Aktif</h4>
+                <p>Nyalakan sakelar di pojok kanan atas untuk memulai streaming kamera 3D POV secara live dari mata bot.</p>
+                <button type="button" class="btn btn-primary" id="btn-turn-on-camera">
+                  <i class="fa-solid fa-video"></i> Aktifkan Kamera Sekarang
+                </button>
+              </div>
+
+              <!-- Live Iframe when camera is ON -->
+              <iframe id="camera-iframe" class="camera-stream-iframe hidden" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- Compass & Orientation Radar Card -->
+          <div class="card pov-card">
+            <div class="card-header">
+              <i class="fa-solid fa-compass"></i>
+              <h3>POV Compass Radar (<span class="pov-bot-name">-</span>)</h3>
+            </div>
+
+            <div class="radar-container">
+              <div class="compass-wrapper">
+                <div class="compass-dial" id="compass-dial">
+                  <span class="cardinal n">N</span>
+                  <span class="cardinal e">E</span>
+                  <span class="cardinal s">S</span>
+                  <span class="cardinal w">W</span>
+                  <div class="compass-arrow" id="compass-arrow"></div>
+                </div>
+              </div>
+
+              <div class="spatial-info-box">
+                <div class="info-row">
+                  <span class="info-lbl">Koordinat:</span>
+                  <span class="info-val highlight" id="pov-xyz">X: 0 | Y: 0 | Z: 0</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-lbl">Arah Pandang (Yaw/Pitch):</span>
+                  <span class="info-val" id="pov-yaw-pitch">0Â° / 0Â°</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-lbl">Dimensi World:</span>
+                  <span class="info-val" id="pov-dimension">Overworld</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inventory Inspector Card -->
+          <div class="card pov-card">
+            <div class="card-header">
+              <i class="fa-solid fa-box-open"></i>
+              <h3>Visual Inventory (<span class="pov-bot-name">-</span>)</h3>
+            </div>
+
+            <div class="mc-inventory-panel">
+              <div class="mc-inventory-title">Inventory</div>
+              <div class="mc-inventory-grid" id="inventory-grid-container">
+                <!-- Dynamically populated 36 inventory slots (27 tas + 9 hotbar) -->
+              </div>
+              <div class="mc-inventory-hint">PC: klik kanan item &middot; HP: ketuk item lalu tekan Gunakan</div>
+            </div>
+          </div>
+
+          <!-- Nearby Entities Radar Table Card -->
+          <div class="card pov-card full-width">
+            <div class="card-header">
+              <i class="fa-solid fa-users"></i>
+              <h3>Pemain Sekitar (<span class="pov-bot-name">-</span>)</h3>
+            </div>
+
+            <div class="entities-table-wrapper">
+              <table class="entities-table">
+                <thead>
+                  <tr>
+                    <th>Tipe / ID</th>
+                    <th>Nama Pemain</th>
+                    <th>Jarak (Meter/Blok)</th>
+                  </tr>
+                </thead>
+                <tbody id="entities-table-body">
+                  <tr>
+                    <td colspan="3" style="text-align: center; color: var(--text-muted); padding: 1rem;">Bot sedang offline atau tidak ada pemain di sekitar.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: SETTINGS -->
+      <div class="tab-content" id="tab-settings">
+        <div class="settings-grid">
+          <!-- Connection Settings -->
+          <div class="card settings-card">
+            <div class="card-header">
+              <i class="fa-solid fa-server"></i>
+              <h3>Pengaturan Akun: <span id="setting-bot-title">-</span></h3>
+            </div>
+            <form id="form-settings-connection">
+              <div class="form-group">
+                <label for="cfg-mode"><i class="fa-solid fa-layer-group"></i> Mode AFK (Tab Dashboard)</label>
+                <select id="cfg-mode" class="form-control">
+                  <option value="tycoon">AFK Tycoon</option>
+                  <option value="oneblock">AFK OneBlock</option>
+                </select>
+                <small class="form-hint">Akun hanya tampil di tab sesuai mode. Skrip otomatis di bawah dijalankan untuk mode ini.</small>
+              </div>
+
+              <div class="form-group">
+                <label for="cfg-username">Username Bot</label>
+                <input type="text" id="cfg-username" class="form-control" value="">
+              </div>
+
+              <div class="form-group">
+                <label for="cfg-host">Server Address (Host / IP)</label>
+                <input type="text" id="cfg-host" class="form-control" value="alwination.id">
+              </div>
+
+              <div class="form-group">
+                <label for="cfg-port">Server Port</label>
+                <input type="number" id="cfg-port" class="form-control" value="25565">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col">
+                  <label for="cfg-version">Versi Minecraft</label>
+                  <select id="cfg-version" class="form-control">
+                    <option value="auto">Auto Detect</option>
+                    <option value="1.20.4">1.20.4</option>
+                    <option value="1.20.1">1.20.1</option>
+                    <option value="1.19.4">1.19.4</option>
+                    <option value="1.18.2">1.18.2</option>
+                    <option value="1.16.5">1.16.5</option>
+                  </select>
+                </div>
+
+                <div class="form-group col">
+                  <label for="cfg-auth">Tipe Login</label>
+                  <select id="cfg-auth" class="form-control">
+                    <option value="offline">Offline / Cracked</option>
+                    <option value="microsoft">Microsoft Account</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="cfg-password">Password / Pin (Opsional)</label>
+                <input type="password" id="cfg-password" class="form-control" placeholder="Password akun untuk /login">
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="switch-label">
+                  <input type="checkbox" id="cfg-reconnect" checked>
+                  <span class="slider"></span>
+                  <span class="label-text">Auto Reconnect Otomatis</span>
+                </label>
+              </div>
+
+              <div class="settings-actions">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fa-solid fa-floppy-disk"></i> Simpan Pengaturan Akun
+                </button>
+                <button type="button" class="btn btn-danger" id="btn-delete-account">
+                  <i class="fa-solid fa-trash"></i> Hapus Akun Ini
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Custom quick buttons (global, all accounts) -->
+          <div class="card settings-card">
+            <div class="card-header">
+              <i class="fa-solid fa-bolt"></i>
+              <h3>Tombol Cepat (Semua Akun)</h3>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.8rem;">
+              Tombol muncul di samping /market di console. Isi perintah langsung dikirim ke chat akun yang sedang dipilih.
+            </p>
+            <div id="quick-cmd-editor"></div>
+            <div class="settings-actions">
+              <button type="button" class="btn btn-secondary" id="btn-add-quick-cmd">
+                <i class="fa-solid fa-plus"></i> Tambah Tombol
+              </button>
+              <button type="button" class="btn btn-primary" id="btn-save-quick-cmds">
+                <i class="fa-solid fa-floppy-disk"></i> Simpan Tombol
+              </button>
+            </div>
+            <p id="quick-cmd-status" style="margin-top: 0.6rem; font-size: 0.8rem; min-height: 1.2em;"></p>
+          </div>
+
+          <!-- Security & Password Protection Settings Card -->
+          <div class="card settings-card">
+            <div class="card-header">
+              <i class="fa-solid fa-shield-halved" style="color: #6366f1;"></i>
+              <h3>Sistem Keamanan &amp; Password Dashboard</h3>
+            </div>
+            <form id="form-settings-security">
+              <div class="form-group checkbox-group">
+                <label class="switch-label">
+                  <input type="checkbox" id="cfg-security-enabled">
+                  <span class="slider"></span>
+                  <span class="label-text"><strong>Aktifkan Proteksi Password Web</strong> (Setiap IP/Perangkat baru wajib memasukkan password)</span>
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="cfg-security-password"><i class="fa-solid fa-key"></i> Atur Password Baru Dashboard:</label>
+                <div class="password-input-wrap">
+                  <input type="password" id="cfg-security-password" class="form-control" placeholder="Masukkan password baru...">
+                  <button type="button" class="btn-eye-toggle" id="btn-toggle-sec-pass">
+                    <i class="fa-solid fa-eye" id="eye-sec-pass"></i>
+                  </button>
+                </div>
+                <small style="color: var(--text-muted); display: block; margin-top: 0.4rem;">
+                  Password ini digunakan oleh siapa saja yang hendak mengakses Web Dashboard jika sakelar proteksi di atas diaktifkan.
+                </small>
+              </div>
+              <div class="security-status-badge" id="sec-status-badge">
+                <i class="fa-solid fa-circle-info"></i> Status Proteksi: <span id="sec-status-text" class="badge-disabled">NON-AKTIF (Akses Terbuka)</span>
+              </div>
+              <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">
+                <i class="fa-solid fa-floppy-disk"></i> Simpan Pengaturan Keamanan
+              </button>
+            </form>
+          </div>
+
+          <!-- Auto Script Editor & Auto-Fix Gens -->
+          <div class="card settings-card">
+            <div class="card-header">
+              <i class="fa-solid fa-scroll"></i>
+              <h3>Skrip Auto-Login &amp; Perintah Otomatis (<span id="setting-script-title">-</span>) <span class="script-mode-badge" id="setting-script-mode">TYCOON</span></h3>
+            </div>
+            <form id="form-settings-script">
+              <div class="form-group checkbox-group">
+                <label class="switch-label">
+                  <input type="checkbox" id="cfg-script-enabled" checked>
+                  <span class="slider"></span>
+                  <span class="label-text">Jalankan Skrip Otomatis Saat Bot Spawn</span>
+                </label>
+              </div>
+              <div id="auto-cmd-container" class="auto-cmd-container">
+                <!-- Dynamic command rows rendered by JavaScript -->
+              </div>
+              <small style="color: var(--text-muted); display: block; margin-bottom: 1.2rem; font-size: 0.8rem;">
+                <i class="fa-solid fa-circle-info"></i> Gunakan <code>{password}</code> untuk memasukkan password akun otomatis. Isikan jeda dalam detik (misal 2 = 2 detik / 40 wait units).
+              </small>
+              <div class="cmd-actions-wrap" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+                <button type="button" id="btn-add-cmd" class="btn btn-secondary" style="background: rgba(255,255,255,0.08); border: 1px dashed rgba(255,255,255,0.25);">
+                  <i class="fa-solid fa-plus"></i> Tambah Perintah Baru
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  <i class="fa-solid fa-floppy-disk"></i> Simpan Perintah Otomatis
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Interactive Minecraft Chest GUI Container Modal Window -->
+  <div class="modal-overlay hidden" id="gui-modal">
+    <div class="chest-gui-box">
+      <div class="chest-gui-header">
+        <div class="chest-title-wrap">
+          <i class="fa-solid fa-box-open"></i>
+          <h3 id="gui-modal-title">Fix Your Generators</h3>
+        </div>
+        <div class="chest-gui-actions">
+          <button class="btn-close-modal" id="btn-min-gui-modal" title="Sembunyikan (jendela tetap terbuka di bot, bisa pindah akun)">&minus;</button>
+          <button class="btn-close-modal" id="btn-close-gui-modal" title="Tutup jendela di Minecraft">&times;</button>
+        </div>
+      </div>
+
+      <div class="chest-gui-body">
+        <p class="chest-gui-subtitle">Klik slot item tertutup/gacha untuk membuka atau membeli item di server Minecraft secara live:</p>
+        <div class="chest-grid-container" id="chest-grid-container">
+          <!-- Dynamically populated container slots -->
+        </div>
+
+        <div class="gui-inventory-divider">
+          <span>Inventory</span>
+        </div>
+
+        <div class="chest-grid-container inventory-gui-grid" id="inventory-gui-grid">
+          <!-- Dynamically populated player inventory slots -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Lock Screen / Autentikasi Keamanan Dashboard -->
+  <div class="auth-overlay hidden" id="auth-overlay">
+    <div class="auth-card">
+      <div class="auth-icon-wrap">
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <h2>Dashboard Terkunci</h2>
+      <p class="auth-subtitle">Masukkan kata sandi untuk mengakses dashboard AFK Multi-Bot.</p>
+      
+      <form id="form-auth-login">
+        <div class="form-group">
+          <div class="password-input-wrap">
+            <input type="password" id="auth-password-input" class="form-control" placeholder="Kata Sandi Dashboard" required autocomplete="current-password">
+            <button type="button" class="btn-eye-toggle" id="btn-toggle-auth-pass">
+              <i class="fa-solid fa-eye" id="eye-auth-pass"></i>
+            </button>
+          </div>
+        </div>
+        <div id="auth-error-msg" class="auth-error hidden">
+          <i class="fa-solid fa-circle-exclamation"></i> <span id="auth-error-text">Kata sandi salah!</span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-key"></i> Buka Kunci Dashboard
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Tambah Akun Baru -->
+  <div class="modal-overlay hidden" id="add-account-modal">
+    <div class="add-account-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-user-plus"></i>
+          <h3>Tambah Akun Minecraft</h3>
+        </div>
+        <button class="btn-close-modal" id="btn-close-add-modal">&times;</button>
+      </div>
+
+      <form id="form-add-account">
+        <!-- Platform Selector (Java vs Bedrock) -->
+        <div class="form-group mb-3">
+          <label style="font-weight: 600; font-size: 0.9rem; color: var(--text-main); display: block; margin-bottom: 0.4rem;">
+            <i class="fa-solid fa-gamepad"></i> Platform Game
+          </label>
+          <div class="account-type-selector" style="margin-bottom: 0.85rem;">
+            <div class="type-card active" id="card-platform-java" data-platform="java">
+              <div class="type-icon"><i class="fa-solid fa-mug-hot"></i></div>
+              <div class="type-info">
+                <h4>Java Edition</h4>
+                <p>Port 25565 (Java / Spigot / Paper)</p>
+              </div>
+            </div>
+            <div class="type-card" id="card-platform-bedrock" data-platform="bedrock">
+              <div class="type-icon"><i class="fa-solid fa-cube"></i></div>
+              <div class="type-info">
+                <h4>Bedrock Edition</h4>
+                <p>Port 19132 (Bedrock / PE / Win10)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="account-type-selector">
+          <div class="type-card active" id="card-type-cracked">
+            <div class="type-icon"><i class="fa-solid fa-unlock"></i></div>
+            <div class="type-info">
+              <h4>Akun Cracked / Offline</h4>
+              <p>Untuk server non-premium. Bebas isi username & password /login.</p>
+            </div>
+          </div>
+          <div class="type-card" id="card-type-premium">
+            <div class="type-icon"><i class="fa-solid fa-crown"></i></div>
+            <div class="type-info">
+              <h4>Akun Premium (Microsoft)</h4>
+              <p>Otentikasi resmi via kode browser Microsoft Device Link.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="add-mode"><i class="fa-solid fa-layer-group"></i> Mode AFK</label>
+          <select id="add-mode" class="form-control">
+            <option value="tycoon">AFK Tycoon</option>
+            <option value="oneblock">AFK OneBlock</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="add-username"><i class="fa-solid fa-user"></i> <span id="lbl-add-username">Username Minecraft</span></label>
+          <input type="text" id="add-username" class="form-control" placeholder="Contoh: player_name" required autocomplete="off">
+        </div>
+
+        <div class="form-group" id="grp-add-password">
+          <label for="add-password"><i class="fa-solid fa-key"></i> <span id="lbl-add-password">Password / Pin Server</span></label>
+          <div class="password-input-wrap">
+            <input type="password" id="add-password" class="form-control" placeholder="Password / Pin untuk /login">
+            <button type="button" class="btn-eye-toggle" id="btn-toggle-add-pass">
+              <i class="fa-solid fa-eye" id="eye-add-pass"></i>
+            </button>
+          </div>
+          <small class="form-hint" id="hint-add-password">Dipakai otomatis pada perintah `/login <password>` saat bot masuk server.</small>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="add-host"><i class="fa-solid fa-network-wired"></i> Server Host</label>
+            <input type="text" id="add-host" class="form-control" value="alwination.id" required>
+          </div>
+          <div class="form-group col">
+            <label for="add-port"><i class="fa-solid fa-plug"></i> Server Port</label>
+            <input type="number" id="add-port" class="form-control" value="25565" required>
+          </div>
+        </div>
+
+        <!-- Initial Auto-Script Options (Optional) -->
+        <div class="form-group mb-3" style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+          <label style="font-weight: 600; font-size: 0.88rem; color: var(--accent-info); display: block; margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-scroll"></i> Pengaturan Skrip Otomatis Awal (Opsional)
+          </label>
+
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="add-target-server" style="font-size: 0.8rem;"><i class="fa-solid fa-server"></i> Sub-Server Tujuan</label>
+              <input type="text" id="add-target-server" class="form-control" value="tycoon" placeholder="Contoh: tycoon, lobby, survival">
+              <small class="form-hint">Dijalankan otomatis via <code>/server &lt;nama&gt;</code>.</small>
+            </div>
+            <div class="form-group col">
+              <label for="add-next-cmd" style="font-size: 0.8rem;"><i class="fa-solid fa-terminal"></i> Perintah Lanjutan</label>
+              <input type="text" id="add-next-cmd" class="form-control" value="/is" placeholder="Contoh: /is, /spawn, /home">
+              <small class="form-hint">Perintah setelah berpindah server.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-add-modal">Batal</button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-check"></i> Tambah Akun
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Kode Device Microsoft (MSA) -->
+  <div class="modal-overlay hidden" id="msa-code-modal">
+    <div class="msa-code-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap text-warning">
+          <i class="fa-brands fa-microsoft"></i>
+          <h3>Otentikasi Microsoft Required</h3>
+        </div>
+        <button class="btn-close-modal" id="btn-close-msa-modal">&times;</button>
+      </div>
+
+      <div class="msa-code-body">
+        <p>Aplikasi mencoba menghubungkan akun Premium Anda. Silakan selesaikan otentikasi Microsoft:</p>
+        <div class="msa-link-badge">
+          <span>Buka URL:</span>
+          <a href="https://microsoft.com/link" target="_blank" rel="noopener" id="msa-verification-link">https://microsoft.com/link</a>
+        </div>
+        <div class="msa-code-display">
+          <span class="msa-label">Kode Masuk Anda:</span>
+          <div class="msa-code-val" id="msa-code-value">--------</div>
+          <button class="btn btn-secondary btn-sm" id="btn-copy-msa-code">
+            <i class="fa-solid fa-copy"></i> Salin Kode
+          </button>
+        </div>
+        <small class="text-muted">Setelah menyetujui izin di browser, bot akan otomatis login ke game world.</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three.js 3D WebGL Library & Socket.io -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

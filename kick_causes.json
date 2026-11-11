@@ -1,0 +1,57 @@
+{
+  "realm": "theoneblock (alwination.id)",
+  "updatedAt": "2026-11-11T22:26:00.000Z",
+  "summary": "Daftar penyebab bot terlempar (kicked/moved to lobby) dari server realm beserta tindakan pencegahan di aplikasi",
+  "known_causes": [
+    {
+      "code": "multiplayer.disconnect.invalid_player_movement",
+      "server_message": "You were kicked from theoneblock: Invalid move player packet received",
+      "category": "Desinkronisasi Pergerakan & Paket",
+      "causes": [
+        {
+          "trigger": "Premature Loop Saat Pindah Subserver (BungeeCord Teleport)",
+          "detail": "Aplikasi menjalankan loop OneBlock AFK (mengirim paket lookAt atau dig) saat bot baru mengeksekusi /server theoneblock. Karena handshake teleport belum selesai, server Paper menganggap paket pergerakan itu ilegal.",
+          "mitigation": "Loop AFK ditunda hingga seluruh perintah skrip (/login, /server, /is) selesai dan bot terkonfirmasi tiba di koordinat pulau."
+        },
+        {
+          "trigger": "Kalkulasi Sudut Pandang Bernilai NaN (Not a Number)",
+          "detail": "Kalkulasi Math.atan2 pada bot.lookAt() menghasilkan NaN jika eyeHeight bot belum terisi saat baru spawn/teleport. Paper server langsung mendeteksi Float.isNaN(pitch) dan memutus sesi.",
+          "mitigation": "Dipasang NaN-Shield pada bot.look() dan dibuat safeLookAt() dengan fallback eyeHeight 1.62."
+        },
+        {
+          "trigger": "Rotasi Kepala (Pitch) Melebihi Batas Fisik (+/- 90 Derajat)",
+          "detail": "Ketika menatap lurus ke bawah persis di atas OneBlock (jarak datar 0), pembulatan desimal sensitivitas Mineflayer dapat menghasilkan pitch > 90.0F.",
+          "mitigation": "Kemiringan pitch dibatasi (clamped) ketat pada rentang aman -89.5 hingga +89.5 derajat."
+        },
+        {
+          "trigger": "Tabrakan Sudut Kamera dari Fungsi bot.dig Bawaan",
+          "detail": "Fungsi bawaan bot.dig(block) otomatis memutar kamera ke tengah blok (Y: 0.5) setiap kali menambang, bertabrakan dengan kunci sudut pandang aplikasi (Y: 0.3).",
+          "mitigation": "Menggunakan opsi bot.dig(block, 'ignore') agar Mineflayer tidak membelokkan kamera secara sepihak."
+        }
+      ]
+    },
+    {
+      "code": "auto_eat_conflict",
+      "category": "Konflik Animasi & Aksi",
+      "causes": [
+        {
+          "trigger": "Makan Bersamaan dengan Menambang / Mengayunkan Tangan",
+          "detail": "Jika bot mencoba memukul blok (dig) atau mengayunkan tangan saat animasi makan belum tuntas (durasi 1.61 detik), anticheat mendeteksi aksi ganda ilegal.",
+          "mitigation": "Loop galian dijeda penuh sampai status makan selesai, lalu senjata/multitool dipasang kembali."
+        }
+      ]
+    },
+    {
+      "code": "out_of_world_interaction",
+      "category": "Jarak & Dimensi",
+      "causes": [
+        {
+          "trigger": "Mencoba Menambang dari Jarak Jauh / Beda Dunia",
+          "detail": "Mengirim paket interaksi pukulan blok ke koordinat pulau saat bot masih berada di koordinat lobby (jarak ribuan blok).",
+          "mitigation": "Pengecekan jarak fisik ketat (Island Distance Guard). Jika jarak > 10-15 blok, bot menahan diri dan tidak mengirim paket apa pun."
+        }
+      ]
+    }
+  ]
+}
+

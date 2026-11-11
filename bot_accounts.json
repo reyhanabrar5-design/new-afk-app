@@ -1,0 +1,132 @@
+[
+  {
+    "id": "brar_bror",
+    "username": "brar_bror",
+    "password": "sasori123",
+    "platform": "java",
+    "type": "cracked",
+    "auth": "offline",
+    "host": "alwination.id",
+    "port": 25565,
+    "viewerPort": 3002,
+    "version": "auto",
+    "autoReconnect": true,
+    "reconnectDelay": 10,
+    "scriptEnabled": true,
+    "autoCmds": [
+      {
+        "cmd": "/login sasori123",
+        "delaySec": 2
+      },
+      {
+        "cmd": "/server tycoon",
+        "delaySec": 2
+      },
+      {
+        "cmd": "/is",
+        "delaySec": 2
+      }
+    ],
+    "scriptText": "send /login sasori123\nwait 40\nsend /server tycoon\nwait 40\nsend /is",
+    "mode": "tycoon"
+  },
+  {
+    "id": "bror_brar",
+    "username": "bror_brar",
+    "password": "sasori123",
+    "platform": "java",
+    "type": "cracked",
+    "auth": "offline",
+    "host": "alwination.id",
+    "port": 25565,
+    "viewerPort": 3003,
+    "version": "1.21.11",
+    "autoReconnect": true,
+    "reconnectDelay": 10,
+    "scriptEnabled": true,
+    "autoCmds": [
+      {
+        "cmd": "/login sasori123",
+        "delaySec": 2
+      },
+      {
+        "cmd": "/server theoneblock",
+        "delaySec": 2
+      }
+    ],
+    "scriptText": "send /login sasori123\nwait 40\nsend /server theoneblock",
+    "oneBlock": {
+      "enabled": true,
+      "target": {
+        "x": -6749,
+        "y": 99,
+        "z": -6749
+      },
+      "autoEat": false,
+      "ignoreObstacles": true
+    },
+    "mode": "oneblock"
+  },
+  {
+    "id": "ngebigmo",
+    "username": "ngebigmo",
+    "password": "sasori123",
+    "platform": "java",
+    "type": "cracked",
+    "auth": "offline",
+    "host": "alwination.id",
+    "port": 25565,
+    "viewerPort": 3001,
+    "version": "auto",
+    "autoReconnect": true,
+    "reconnectDelay": 10,
+    "scriptEnabled": true,
+    "autoCmds": [
+      {
+        "cmd": "/login sasori123",
+        "delaySec": 2
+      },
+      {
+        "cmd": "/server tycoon",
+        "delaySec": 2
+      },
+      {
+        "cmd": "/is",
+        "delaySec": 2
+      }
+    ],
+    "scriptText": "send /login sasori123\nwait 40\nsend /server tycoon\nwait 40\nsend /is",
+    "mode": "tycoon"
+  },
+  {
+    "id": "rakyat_brar",
+    "username": "rakyat_brar",
+    "password": "sasori123",
+    "platform": "java",
+    "type": "cracked",
+    "auth": "offline",
+    "host": "alwination.id",
+    "port": 25565,
+    "viewerPort": 3004,
+    "version": "auto",
+    "autoReconnect": true,
+    "reconnectDelay": 10,
+    "scriptEnabled": true,
+    "autoCmds": [
+      {
+        "cmd": "/login sasori123",
+        "delaySec": 2
+      },
+      {
+        "cmd": "/server tycoon",
+        "delaySec": 2
+      },
+      {
+        "cmd": "/is",
+        "delaySec": 2
+      }
+    ],
+    "scriptText": "send /login sasori123\nwait 40\nsend /server tycoon\nwait 40\nsend /is",
+    "mode": "tycoon"
+  }
+]

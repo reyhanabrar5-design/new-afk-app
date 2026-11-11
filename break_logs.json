@@ -1,0 +1,54 @@
+[
+  {
+    "timestamp": "2026-11-11T18:13:23.977Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "blockName": "moss_block",
+    "coordinates": {
+      "x": -6750,
+      "y": 99,
+      "z": -6750
+    },
+    "timeMs": 310,
+    "totalBroken": 563
+  },
+  {
+    "timestamp": "2026-11-11T18:13:23.666Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "blockName": "deepslate_iron_ore",
+    "coordinates": {
+      "x": -6750,
+      "y": 99,
+      "z": -6750
+    },
+    "timeMs": 300,
+    "totalBroken": 562
+  },
+  {
+    "timestamp": "2026-11-11T18:13:23.363Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "blockName": "pumpkin",
+    "coordinates": {
+      "x": -6750,
+      "y": 99,
+      "z": -6750
+    },
+    "timeMs": 344,
+    "totalBroken": 561
+  },
+  {
+    "timestamp": "2026-11-11T18:13:23.017Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "blockName": "granite",
+    "coordinates": {
+      "x": -6750,
+      "y": 99,
+      "z": -6750
+    },
+    "timeMs": 317,
+    "totalBroken": 560
+  }
+]

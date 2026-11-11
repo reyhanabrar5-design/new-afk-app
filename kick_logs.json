@@ -1,0 +1,1082 @@
+[
+  {
+    "timestamp": "2026-11-11T18:09:57.859Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"text\":{\"type\":\"string\",\"value\":\"An internal error occurred in your connection.\"}}}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": "overworld",
+      "entity": {
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": 3.143,
+        "pitch": 0.018,
+        "onGround": true,
+        "vehicle": null
+      },
+      "lastServerPosition": {
+        "t": "2026-11-11T18:09:53.578Z",
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": -0.07708740234375,
+        "pitch": -1.0500391721725464,
+        "flags": "{\"_value\":0,\"x\":false,\"y\":false,\"z\":false,\"yaw\":false,\"pitch\":false,\"dx\":false,\"dy\":false,\"dz\":false,\"yawDelta\":false}",
+        "teleportId": 3
+      },
+      "lastWorldChange": {
+        "t": "2026-11-11T18:09:53.578Z",
+        "packet": "respawn",
+        "data": "{\"worldState\":{\"dimension\":0,\"name\":\"minecraft:hub2026\",\"hashedSeed\":[1125781030,1629153976],\"gamemode\":\"survival\",\"previousGamemode\":0,\"isDebug\":false,\"isFlat\":true,\"portalCooldown\":0,\"seaLevel\":-63},\"copyMetadata\":3}"
+      },
+      "recentOutgoingMovement": [
+        {
+          "t": "2026-11-11T18:09:53.800Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": false
+        },
+        {
+          "t": "2026-11-11T18:09:54.796Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T18:09:55.796Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T18:09:56.819Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T18:09:57.820Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        }
+      ],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 79,
+      "playerLoadedSent": 3,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T18:09:51.270Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"text\":{\"type\":\"string\",\"value\":\"An internal error occurred in your connection.\"}}}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": "overworld",
+      "entity": {
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": 3.143,
+        "pitch": 0.018,
+        "onGround": true,
+        "vehicle": null
+      },
+      "lastServerPosition": {
+        "t": "2026-11-11T18:09:47.018Z",
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": -0.07708740234375,
+        "pitch": -1.0500391721725464,
+        "flags": "{\"_value\":0,\"x\":false,\"y\":false,\"z\":false,\"yaw\":false,\"pitch\":false,\"dx\":false,\"dy\":false,\"dz\":false,\"yawDelta\":false}",
+        "teleportId": 3
+      },
+      "lastWorldChange": {
+        "t": "2026-11-11T18:09:47.018Z",
+        "packet": "respawn",
+        "data": "{\"worldState\":{\"dimension\":0,\"name\":\"minecraft:hub2026\",\"hashedSeed\":[1125781030,1629153976],\"gamemode\":\"survival\",\"previousGamemode\":0,\"isDebug\":false,\"isFlat\":true,\"portalCooldown\":0,\"seaLevel\":-63},\"copyMetadata\":3}"
+      },
+      "recentOutgoingMovement": [
+        {
+          "t": "2026-11-11T18:09:47.248Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": false
+        },
+        {
+          "t": "2026-11-11T18:09:48.267Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T18:09:49.259Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T18:09:50.244Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T18:09:51.221Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        }
+      ],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 78,
+      "playerLoadedSent": 3,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T17:55:42.403Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"extra\":[{\"bold\":true,\"color\":\"#FF6B3D\",\"text\":\"Account \"},{\"color\":\"dark_gray\",\"text\":\"» \"},{\"color\":\"#D92625\",\"text\":\"You are already online.\"}],\"text\":\"\"}"
+    ],
+    "oneBlockAfkActive": true,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": null,
+      "entity": null,
+      "lastServerPosition": null,
+      "lastWorldChange": null,
+      "recentOutgoingMovement": [],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 0,
+      "playerLoadedSent": 0,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T17:55:32.240Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"extra\":[{\"bold\":true,\"color\":\"#FF6B3D\",\"text\":\"Account \"},{\"color\":\"dark_gray\",\"text\":\"» \"},{\"color\":\"#D92625\",\"text\":\"You are already online.\"}],\"text\":\"\"}"
+    ],
+    "oneBlockAfkActive": true,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": null,
+      "entity": null,
+      "lastServerPosition": null,
+      "lastWorldChange": null,
+      "recentOutgoingMovement": [],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 0,
+      "playerLoadedSent": 0,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T17:40:30.214Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"text\":{\"type\":\"string\",\"value\":\"An internal error occurred in your connection.\"}}}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": "overworld",
+      "entity": {
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": 3.143,
+        "pitch": 0.018,
+        "onGround": true,
+        "vehicle": null
+      },
+      "lastServerPosition": {
+        "t": "2026-11-11T17:40:25.063Z",
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": -0.07708740234375,
+        "pitch": -1.0500391721725464,
+        "flags": "{\"_value\":0,\"x\":false,\"y\":false,\"z\":false,\"yaw\":false,\"pitch\":false,\"dx\":false,\"dy\":false,\"dz\":false,\"yawDelta\":false}",
+        "teleportId": 3
+      },
+      "lastWorldChange": {
+        "t": "2026-11-11T17:40:25.063Z",
+        "packet": "respawn",
+        "data": "{\"worldState\":{\"dimension\":0,\"name\":\"minecraft:hub2026\",\"hashedSeed\":[1125781030,1629153976],\"gamemode\":\"survival\",\"previousGamemode\":0,\"isDebug\":false,\"isFlat\":true,\"portalCooldown\":0,\"seaLevel\":-63},\"copyMetadata\":3}"
+      },
+      "recentOutgoingMovement": [
+        {
+          "t": "2026-11-11T17:40:26.117Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T17:40:27.110Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T17:40:28.117Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T17:40:29.135Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T17:40:30.127Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        }
+      ],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 100,
+      "playerLoadedSent": 3,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T17:40:19.893Z",
+    "botId": "brar_bror",
+    "username": "brar_bror",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"color\":\"red\",\"text\":\"You are already connected to a remote proxy!\"}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "auto",
+      "dimension": null,
+      "entity": null,
+      "lastServerPosition": null,
+      "lastWorldChange": null,
+      "recentOutgoingMovement": [],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 0,
+      "playerLoadedSent": 0,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T17:35:38.097Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"text\":\"You are logging in too fast, try again later.\"}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": null,
+      "entity": null,
+      "lastServerPosition": null,
+      "lastWorldChange": null,
+      "recentOutgoingMovement": [],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 0,
+      "playerLoadedSent": 0,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T17:35:36.970Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"color\":\"red\",\"text\":\"You are already connected to a remote proxy!\"}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": null,
+      "entity": null,
+      "lastServerPosition": null,
+      "lastWorldChange": null,
+      "recentOutgoingMovement": [],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 0,
+      "playerLoadedSent": 0,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T17:35:32.626Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"text\":\"You are logging in too fast, try again later.\"}"
+    ],
+    "oneBlockAfkActive": true,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": null,
+      "entity": null,
+      "lastServerPosition": null,
+      "lastWorldChange": null,
+      "recentOutgoingMovement": [],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 0,
+      "playerLoadedSent": 0,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T17:35:30.353Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"color\":\"red\",\"text\":\"You logged in from another location!\"}"
+    ],
+    "oneBlockAfkActive": true,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": null,
+      "entity": null,
+      "lastServerPosition": null,
+      "lastWorldChange": null,
+      "recentOutgoingMovement": [],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 0,
+      "playerLoadedSent": 0,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T17:02:32.779Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"text\":{\"type\":\"string\",\"value\":\"An internal error occurred in your connection.\"}}}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": "overworld",
+      "entity": {
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": 3.143,
+        "pitch": 0.018,
+        "onGround": true,
+        "vehicle": null
+      },
+      "lastServerPosition": {
+        "t": "2026-11-11T17:02:28.575Z",
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": -0.07708740234375,
+        "pitch": -1.0500391721725464,
+        "flags": "{\"_value\":0,\"x\":false,\"y\":false,\"z\":false,\"yaw\":false,\"pitch\":false,\"dx\":false,\"dy\":false,\"dz\":false,\"yawDelta\":false}",
+        "teleportId": 3
+      },
+      "lastWorldChange": {
+        "t": "2026-11-11T17:02:28.575Z",
+        "packet": "respawn",
+        "data": "{\"worldState\":{\"dimension\":0,\"name\":\"minecraft:hub2026\",\"hashedSeed\":[1125781030,1629153976],\"gamemode\":\"survival\",\"previousGamemode\":0,\"isDebug\":false,\"isFlat\":true,\"portalCooldown\":0,\"seaLevel\":-63},\"copyMetadata\":3}"
+      },
+      "recentOutgoingMovement": [
+        {
+          "t": "2026-11-11T17:02:28.693Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": false
+        },
+        {
+          "t": "2026-11-11T17:02:29.669Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T17:02:30.679Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T17:02:31.713Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T17:02:32.726Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        }
+      ],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 79,
+      "playerLoadedSent": 3,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T16:35:02.164Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"text\":{\"type\":\"string\",\"value\":\"An internal error occurred in your connection.\"}}}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": "overworld",
+      "entity": {
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": 3.143,
+        "pitch": 0.018,
+        "onGround": true,
+        "vehicle": null
+      },
+      "lastServerPosition": {
+        "t": "2026-11-11T16:34:57.821Z",
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": -0.07708740234375,
+        "pitch": -1.0500391721725464,
+        "flags": "{\"_value\":0,\"x\":false,\"y\":false,\"z\":false,\"yaw\":false,\"pitch\":false,\"dx\":false,\"dy\":false,\"dz\":false,\"yawDelta\":false}",
+        "teleportId": 3
+      },
+      "lastWorldChange": {
+        "t": "2026-11-11T16:34:57.821Z",
+        "packet": "respawn",
+        "data": "{\"worldState\":{\"dimension\":0,\"name\":\"minecraft:hub2026\",\"hashedSeed\":[1125781030,1629153976],\"gamemode\":\"survival\",\"previousGamemode\":0,\"isDebug\":false,\"isFlat\":true,\"portalCooldown\":0,\"seaLevel\":-63},\"copyMetadata\":3}"
+      },
+      "recentOutgoingMovement": [
+        {
+          "t": "2026-11-11T16:34:58.048Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": false
+        },
+        {
+          "t": "2026-11-11T16:34:59.047Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:35:00.064Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:35:01.068Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:35:02.082Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        }
+      ],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 79,
+      "playerLoadedSent": 3,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T16:34:46.551Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"text\":{\"type\":\"string\",\"value\":\"An internal error occurred in your connection.\"}}}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": "overworld",
+      "entity": {
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": 3.143,
+        "pitch": 0.018,
+        "onGround": true,
+        "vehicle": null
+      },
+      "lastServerPosition": {
+        "t": "2026-11-11T16:34:42.229Z",
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": -0.07708740234375,
+        "pitch": -1.0500391721725464,
+        "flags": "{\"_value\":0,\"x\":false,\"y\":false,\"z\":false,\"yaw\":false,\"pitch\":false,\"dx\":false,\"dy\":false,\"dz\":false,\"yawDelta\":false}",
+        "teleportId": 3
+      },
+      "lastWorldChange": {
+        "t": "2026-11-11T16:34:42.228Z",
+        "packet": "respawn",
+        "data": "{\"worldState\":{\"dimension\":0,\"name\":\"minecraft:hub2026\",\"hashedSeed\":[1125781030,1629153976],\"gamemode\":\"survival\",\"previousGamemode\":0,\"isDebug\":false,\"isFlat\":true,\"portalCooldown\":0,\"seaLevel\":-63},\"copyMetadata\":3}"
+      },
+      "recentOutgoingMovement": [
+        {
+          "t": "2026-11-11T16:34:42.501Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": false
+        },
+        {
+          "t": "2026-11-11T16:34:43.501Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:34:44.499Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:34:45.519Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:34:46.510Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        }
+      ],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 78,
+      "playerLoadedSent": 3,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T16:34:31.871Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"text\":{\"type\":\"string\",\"value\":\"An internal error occurred in your connection.\"}}}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": "overworld",
+      "entity": {
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": 3.143,
+        "pitch": 0.018,
+        "onGround": true,
+        "vehicle": null
+      },
+      "lastServerPosition": {
+        "t": "2026-11-11T16:34:27.587Z",
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": -0.07708740234375,
+        "pitch": -1.0500391721725464,
+        "flags": "{\"_value\":0,\"x\":false,\"y\":false,\"z\":false,\"yaw\":false,\"pitch\":false,\"dx\":false,\"dy\":false,\"dz\":false,\"yawDelta\":false}",
+        "teleportId": 3
+      },
+      "lastWorldChange": {
+        "t": "2026-11-11T16:34:27.587Z",
+        "packet": "respawn",
+        "data": "{\"worldState\":{\"dimension\":0,\"name\":\"minecraft:hub2026\",\"hashedSeed\":[1125781030,1629153976],\"gamemode\":\"survival\",\"previousGamemode\":0,\"isDebug\":false,\"isFlat\":true,\"portalCooldown\":0,\"seaLevel\":-63},\"copyMetadata\":3}"
+      },
+      "recentOutgoingMovement": [
+        {
+          "t": "2026-11-11T16:34:27.831Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": false
+        },
+        {
+          "t": "2026-11-11T16:34:28.848Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:34:29.846Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:34:30.841Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:34:31.817Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        }
+      ],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 79,
+      "playerLoadedSent": 3,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T16:17:30.860Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"text\":{\"type\":\"string\",\"value\":\"An internal error occurred in your connection.\"}}}"
+    ],
+    "oneBlockAfkActive": true,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": "overworld",
+      "entity": {
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": 3.143,
+        "pitch": 0.018,
+        "onGround": true,
+        "vehicle": null
+      },
+      "lastServerPosition": {
+        "t": "2026-11-11T16:17:26.599Z",
+        "x": 0.5,
+        "y": 61,
+        "z": 0.5,
+        "yaw": -0.07708740234375,
+        "pitch": -1.0500391721725464,
+        "flags": "{\"_value\":0,\"x\":false,\"y\":false,\"z\":false,\"yaw\":false,\"pitch\":false,\"dx\":false,\"dy\":false,\"dz\":false,\"yawDelta\":false}",
+        "teleportId": 3
+      },
+      "lastWorldChange": {
+        "t": "2026-11-11T16:17:26.598Z",
+        "packet": "respawn",
+        "data": "{\"worldState\":{\"dimension\":0,\"name\":\"minecraft:hub2026\",\"hashedSeed\":[1125781030,1629153976],\"gamemode\":\"survival\",\"previousGamemode\":0,\"isDebug\":false,\"isFlat\":true,\"portalCooldown\":0,\"seaLevel\":-63},\"copyMetadata\":3}"
+      },
+      "recentOutgoingMovement": [
+        {
+          "t": "2026-11-11T16:17:26.791Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": false
+        },
+        {
+          "t": "2026-11-11T16:17:27.783Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:17:28.812Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:17:29.841Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T16:17:30.823Z",
+          "packet": "position",
+          "x": 0.5,
+          "y": 61,
+          "z": 0.5,
+          "yaw": -0.07708740234375,
+          "pitch": -1.0500391721725464,
+          "onGround": true
+        }
+      ],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 78,
+      "playerLoadedSent": 3,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T16:16:14.528Z",
+    "botId": "brar_bror",
+    "username": "brar_bror",
+    "realm": "alwination.id",
+    "type": "proxy_kicked",
+    "reasons": [
+      "{\"color\":\"red\",\"text\":\"You logged in from another location!\"}"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "auto",
+      "dimension": null,
+      "entity": null,
+      "lastServerPosition": null,
+      "lastWorldChange": null,
+      "recentOutgoingMovement": [],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "tickEndSent": 0,
+      "playerLoadedSent": 0,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T15:38:15.051Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "theoneblock",
+    "type": "subserver_moved_to_lobby",
+    "reasons": [
+      "Reason: multiplayer.disconnect.invalid_player_movement",
+      "You were kicked from theoneblock: Invalid move player packet received"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": {
+      "negotiatedVersion": "1.21.11",
+      "configVersion": "1.21.11",
+      "dimension": "overworld",
+      "entity": {
+        "x": -6751.7,
+        "y": 97.5,
+        "z": -6749.145,
+        "yaw": 4.863,
+        "pitch": 0.022,
+        "onGround": true,
+        "vehicle": null
+      },
+      "lastServerPosition": {
+        "t": "2026-11-11T15:38:11.858Z",
+        "x": -6751.699999988079,
+        "y": 97.5,
+        "z": -6749.144620374034,
+        "yaw": -98.6280517578125,
+        "pitch": -1.2403695583343506,
+        "flags": "{\"_value\":0,\"x\":false,\"y\":false,\"z\":false,\"yaw\":false,\"pitch\":false,\"dx\":false,\"dy\":false,\"dz\":false,\"yawDelta\":false}",
+        "teleportId": 1
+      },
+      "lastWorldChange": {
+        "t": "2026-11-11T15:38:11.791Z",
+        "packet": "login",
+        "data": "{\"entityId\":1079945,\"isHardcore\":false,\"worldNames\":[\"minecraft:overworld\",\"minecraft:the_nether\",\"minecraft:superiorworld_nether\",\"minecraft:superiorworld_the_end\",\"minecraft:superiorworld\",\"minecraft:dungeonworld\"],\"maxPlayers\":200,\"viewDistance\":6,\"simulationDistance\":3,\"reducedDebugInfo\":false,\"enableRespawnScreen\":true,\"doLimitedCrafting\":false,\"worldState\":{\"dimension\":0,\"name\":\"minecraft:superiorworld\",\"hashedSeed\":[582803203,-715202535],\"gamemode\":\"survival\",\"previousGamemode\":0,\"isDebug\":false,\"isFlat\":true,\"death\":{\"dimensionName\":\"minecraft:superiorworld\",\"location\":{\"x\":-6745,\"z\":-"
+      },
+      "recentOutgoingMovement": [
+        {
+          "t": "2026-11-11T15:38:11.858Z",
+          "packet": "position_look",
+          "x": -6751.699999988079,
+          "y": 97.5,
+          "z": -6749.144620374034,
+          "yaw": -98.6280517578125,
+          "pitch": -1.2403695583343506,
+          "onGround": false
+        },
+        {
+          "t": "2026-11-11T15:38:12.479Z",
+          "packet": "position",
+          "x": -6751.699999988079,
+          "y": 97.5,
+          "z": -6749.144620374034,
+          "yaw": -98.6280517578125,
+          "pitch": -1.2403695583343506,
+          "onGround": true
+        },
+        {
+          "t": "2026-11-11T15:38:13.485Z",
+          "packet": "position",
+          "x": -6751.699999988079,
+          "y": 97.5,
+          "z": -6749.144620374034,
+          "yaw": -98.6280517578125,
+          "pitch": -1.2403695583343506,
+          "onGround": true
+        }
+      ],
+      "blockedPackets": 0,
+      "repairedPackets": 0,
+      "lastBlockedPacket": null
+    }
+  },
+  {
+    "timestamp": "2026-11-11T15:31:15.593Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "theoneblock",
+    "type": "subserver_moved_to_lobby",
+    "reasons": [
+      "Reason: multiplayer.disconnect.invalid_player_movement",
+      "You were kicked from theoneblock: Invalid move player packet received"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": null,
+    "note": "Dicatat sebelum perekam diagnostik dipasang (dua entri ganda digabung)."
+  },
+  {
+    "timestamp": "2026-11-11T15:30:53.136Z",
+    "botId": "bror_brar",
+    "username": "bror_brar",
+    "realm": "theoneblock",
+    "type": "subserver_moved_to_lobby",
+    "reasons": [
+      "Reason: multiplayer.disconnect.invalid_player_movement",
+      "You were kicked from theoneblock: Invalid move player packet received"
+    ],
+    "oneBlockAfkActive": false,
+    "diagnostics": null,
+    "note": "Dicatat sebelum perekam diagnostik dipasang (dua entri ganda digabung)."
+  }
+]

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: minecraft-afk-web-server
+    env: docker
+    plan: free
+    region: singapore
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: MC_HOST
+        value: alwination.id
+      - key: MC_PORT
+        value: "25565"
+      - key: MC_USERNAME
+        value: AFK_Bot
